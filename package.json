@@ -1,0 +1,23 @@
+{
+  "name": "messenger-webhook",
+  "version": "1.0.0",
+  "description": "Mi primer bot en facebook con webhook",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dazulu4/messenger-webhook.git"
+  },
+  "author": "dazulu4@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dazulu4/messenger-webhook/issues"
+  },
+  "homepage": "https://github.com/dazulu4/messenger-webhook#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
