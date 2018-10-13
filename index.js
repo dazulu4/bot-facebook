@@ -27,6 +27,11 @@ app.post('/webhook', (req, res) => {
       // will only ever contain one message, so we get index 0
       let webhook_event = entry.messaging[0];
       console.log(webhook_event);
+
+      // Get the sender PSID
+      let sender_psid = webhook_event.sender.id;
+      console.log('Sender PSID: ' + sender_psid);
+      
     });
 
     // Returns a '200 OK' response to all requests
@@ -42,7 +47,7 @@ app.post('/webhook', (req, res) => {
 app.get('/webhook', (req, res) => {
 
   // Your verify token. Should be a random string.
-  let VERIFY_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+  let VERIFY_TOKEN = process.env. ;
     
   // Parse the query params
   let mode = req.query['hub.mode'];
@@ -65,3 +70,18 @@ app.get('/webhook', (req, res) => {
     }
   }
 });
+
+// Handles messages events
+function handleMessage(sender_psid, received_message) {
+
+}
+
+// Handles messaging_postbacks events
+function handlePostback(sender_psid, received_postback) {
+
+}
+
+// Sends response messages via the Send API
+function callSendAPI(sender_psid, response) {
+  
+}
